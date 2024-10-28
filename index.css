@@ -1,0 +1,523 @@
+body{
+    background:linear-gradient(to bottom,black,darkblue);
+  height: 100vh;
+  display: flex;
+}
+.container{
+    top:375px;
+    position: relative;
+    left: 200px;
+}
+.road{
+    width: 900px;
+    height: 70px;
+    background: rgb(12, 12, 81);
+    position: absolute;
+    top:300px;
+}
+.fog{
+    position: absolute;
+    z-index: 1; 
+    top: 270px;
+    display: block;
+    min-width: 730px;
+    height: 150px;
+    background: white;
+    opacity: 0.65;
+    filter: blur(8px);
+    opacity: 0; /* เริ่มต้นที่ความโปร่งใส 0 */
+    animation: fadeIn 10s forwards infinite; /* เรียกใช้ animation */
+    animation-delay: 1s;
+}
+.sky{
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 1000px;
+    height: 1000px;
+    bottom: 300px;
+    background:linear-gradient(to bottom,lightblue, white);
+    opacity: 0.65;
+    filter: blur(8px);
+    opacity: 0; /* เริ่มต้นที่ความโปร่งใส 0 */
+    animation: fadeIn 5s forwards infinite; /* เรียกใช้ animation */
+    animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0.25; /* เริ่มต้นที่ความโปร่งใส 0 */
+    }
+    50%{
+        opacity: 0.5; /* สิ้นสุดที่ความโปร่งใส 1 */
+    }
+    75%{
+        opacity: 0.25;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.dot{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    top:80px;
+}
+.dot span{
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 20px 50px;
+    min-width: 30px;
+    height: 10px;
+    background: rgb(234, 234, 234);
+}
+.house{
+    width: 80px;
+    height: 300px;
+    background: black;
+    position: absolute;
+    top: 1px;
+}
+.glass:nth-child(1) {
+    width: 15px;
+    height: 10px;
+    top: 30px;
+    left: 10px;
+    background: whitesmoke;
+    position: absolute;
+}
+.glass:nth-child(2) {
+    width: 15px;
+    height: 10px;
+    top: 30px;
+    right: 20px;
+    background: whitesmoke;
+    position: absolute;
+}
+.glass:nth-child(3) {
+    width: 15px;
+    height: 10px;
+    top: 60px;
+    left: 10px;
+    background: whitesmoke;
+    position: absolute;
+}
+.glass:nth-child(4) {
+    width: 15px;
+    height: 10px;
+    top: 60px;
+    right: 20px;
+    background: whitesmoke;
+    position: absolute;
+}
+.glass:nth-child(5) {
+    width: 15px;
+    height: 10px;
+    top: 90px;
+    left: 10px;
+    background: whitesmoke;
+    position: absolute;
+}
+.glass:nth-child(6) {
+    width: 15px;
+    height: 10px;
+    top: 90px;
+    right: 20px;
+    background: whitesmoke;
+    position: absolute;
+}
+.house2{
+    width: 100px;
+    height: 200px;
+    background: black;
+    position: absolute;
+    top: 100px;
+    left: 70px;
+}
+.window:nth-child(1){
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    left: 20px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+.window:nth-child(2){
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    right: 20px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+.window:nth-child(3){
+    width: 15px;
+    height: 15px;
+    top: 60px;
+    left: 20px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+.window:nth-child(4){
+    width: 15px;
+    height: 15px;
+    top: 60px;
+    right: 20px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+.door{
+    width: 50px;
+    height: 50px;
+    top: 150px;
+    left: 20px;
+    background: rgba(245, 245, 245, 0.784);
+    position: absolute;
+}
+.line{
+    width: 3px;
+    height: 50px;
+    top: 150px;
+    left: 43px;
+    background: black;
+    position: absolute;
+}
+.house3{
+    width: 150px;
+    height: 100px;
+    background: rgba(0, 0, 0);
+    position: absolute;
+    left: 170px;
+    top: 200px;
+}
+.roof{
+    width: 0;
+    height: 0;
+    border: 75px solid transparent;
+    border-top:0 ;
+    border-bottom: 80px  solid rgb(0, 0, 0);
+    bottom: 100px;
+    position: absolute;
+}
+.circle{
+    width: 30px;
+    height: 30px;
+    border-top:0 ;
+    border-radius: 50%;
+    position: absolute;
+    bottom:110px;
+    right: 60px;
+    background: whitesmoke;
+}
+.block{
+    width: 22px;
+    height: 80px;
+    background: rgb(0, 0, 0);
+    left: 45px;
+    position: absolute;
+}
+.circle-line:nth-child(1){
+    width: 3px;
+    height: 30px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    left: 13px;
+}
+.circle-line:nth-child(2){
+    width: 3px;
+    height: 30px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    left: 13px;
+    transform: rotate(90deg);
+}
+.doors{
+    width: 50px;
+    height: 50px;
+    background: rgba(245, 245, 245, 0.784);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.door-line{
+    width: 3px;
+    height: 50px;
+    left: 23px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+}
+.vapour{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+    bottom: 150px;
+    left: 100px;
+}
+.vapour span{
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 2px 50px;
+    min-width: 8px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    animation: animate 5s linear infinite;
+    opacity: 0.5;
+    filter: blur(8px);
+    animation-delay: calc(var(--i) * 0.5s);
+}
+@keyframes animate{
+    0%
+    {
+        transform: translateY(0) scaleX(1);
+        opacity: 0;
+    }
+    15%
+    {
+        opacity: 1;
+    }
+    50%
+    {
+        transform: translateY(-150px) scaleX(5)
+    }
+    95%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateY(-300px) scaleX(10)
+    }
+}
+.house4{
+    width: 100px;
+    height: 400px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    left: 420px;
+    top: -100px;
+}
+.glass-4:nth-child(1) {
+    width: 15px;
+    height: 10px;
+    top: 30px;
+    left: 10px;
+    background: whitesmoke;
+    position: absolute;
+}
+.glass-4:nth-child(2) {
+    width: 15px;
+    height: 10px;
+    top: 30px;
+    right: 20px;
+    background: whitesmoke;
+    position: absolute;
+}
+.glass-4:nth-child(3) {
+    width: 15px;
+    height: 10px;
+    top: 60px;
+    left: 10px;
+    background: whitesmoke;
+    position: absolute;
+}
+.glass-4:nth-child(4) {
+    width: 15px;
+    height: 10px;
+    top: 60px;
+    right: 20px;
+    background: whitesmoke;
+    position: absolute;
+}
+.glass-4:nth-child(5) {
+    width: 15px;
+    height: 10px;
+    top: 90px;
+    left: 10px;
+    background: whitesmoke;
+    position: absolute;
+}
+.glass-4:nth-child(6) {
+    width: 15px;
+    height: 10px;
+    top: 90px;
+    right: 20px;
+    background: rgb(91, 172, 225);
+    position: absolute;
+}
+.house5{
+    width: 100px;
+    height: 250px;
+    background: black;
+    position: absolute;
+    top: 50px;
+    left: 320px;
+}
+.window-5:nth-child(1){
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    left: 20px;
+    position: absolute;
+    background-color:rgb(235, 255, 82);
+}
+.window-5:nth-child(2){
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    right: 20px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+.window-5:nth-child(3){
+    width: 15px;
+    height: 15px;
+    top: 60px;
+    left: 20px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+.window-5:nth-child(4){
+    width: 15px;
+    height: 15px;
+    top: 60px;
+    right: 20px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+.door-h5{
+    width: 50px;
+    height: 50px;
+    top: 200px;
+    left: 20px;
+    background: rgba(245, 245, 245, 0.784);
+    position: absolute;
+}
+.line-h5{
+    width: 3px;
+    height: 50px;
+    left: 25px;
+    background: black;
+    position: absolute;
+}
+.roofs{
+    bottom: 250px;
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent; 
+    border-bottom: 70px solid rgb(0, 0, 0);
+    position: absolute; 
+}
+
+.house6{
+    width: 200px;
+    height: 500px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    left: 520px;
+    top: -200px;
+}
+
+.roof-top{
+    position: relative;
+    display: flex;
+    top: 40px;
+    right: 7px;
+}
+.roof-top span{
+    position: relative;
+    bottom: 50px;
+    display: block;
+    margin: 0 10px ;
+    min-width: 4px;
+    height: 12px;
+    background: rgb(0, 0, 0);
+
+}
+.roof-line{
+    width: 200px;
+    height: 4px;
+    background: rgb(0, 0, 0);
+    top: -10px;
+    position: absolute;
+}
+.glass6:nth-child(2){
+    width: 17px;
+    height: 17px;
+    top: 15px;
+    left: 15px;
+    position: absolute;
+    background: lightseagreen;
+}
+.glass6:nth-child(3){
+    width: 17px;
+    height: 17px;
+    top: 15px;
+    right: 100px;
+    position: absolute;
+    background-color:rgb(255, 255, 255);
+}
+.glass6:nth-child(4){
+    width: 17px;
+    height: 17px;
+    top: 15px;
+    right: 40px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+.glass6:nth-child(5){
+    width: 17px;
+    height: 17px;
+    top: 60px;
+    left: 15px;
+    position: absolute;
+    background: lightseagreen;
+}
+.glass6:nth-child(6){
+    width: 17px;
+    height: 17px;
+    top: 60px;
+    right: 100px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+.glass6:nth-child(7){
+    width: 17px;
+    height: 17px;
+    top: 60px;
+    right: 40px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+
+.glass6:nth-child(8){
+    width: 17px;
+    height: 17px;
+    top: 100px;
+    left: 15px;
+    position: absolute;
+    background: lightseagreen;
+}
+.glass6:nth-child(9){
+    width: 17px;
+    height: 17px;
+    top: 100px;
+    right: 100px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+.glass6:nth-child(10){
+    width: 17px;
+    height: 17px;
+    top: 100px;
+    right: 40px;
+    position: absolute;
+    background-color:rgb(255, 130, 130);
+}
+
+
